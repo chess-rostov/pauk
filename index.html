@@ -70,7 +70,7 @@
           // Also display error if err is returned.
           if (err) {
               console.log("error loading resource")
-              data = data + " " + err;
+              data = "error loading resource";
           }
           document.getElementById("ping-a").innerHTML = data;
           });
@@ -81,7 +81,7 @@
               console.log("Successful ping a.ru: " + data);
           })
           .catch(data => {
-              console.error("Ping failed: " + data);
+              console.error("Ping failed: error loading resource");
           });
     }
       
