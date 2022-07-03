@@ -18,7 +18,7 @@
     <div id="ping-a"></div>
     <br>-->
     <div>Попытка пинга сайта: <span id="namesite"></span></div>
-    <div id="ping-site"></div>
+    <div>Результат пинга: <span id="ping-site"></span></div>
     <br>
     <div id="findedsites">
         <div>Найденные сайты:</div>
@@ -28,7 +28,7 @@
     let globalUrl='';
     let domen=".ru";
     let literas=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-    let timerValue = 2000;  
+    let timerValue = 200;  
       
     function perebor(i) {
         console.log("perebor");
@@ -112,7 +112,11 @@
                             });
                         
                     }else{
-                        i=-1;
+                        /*i=-1;*/
+                        div = document.createElement('div');
+                        div.innerHTML='<span>Конец поиска</span>';
+                        findedsites.appendChild(div);
+                        break;
                     }
                   /*}*/
                   
