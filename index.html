@@ -18,7 +18,14 @@
     <div id="ping-a"></div>
     
     <script>
+    var litera=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
     let timerValue = 2000;  
+      
+    function perebor(i) {
+         var url = '';
+         url = litera[i] + ".ru";
+         console.log(url);
+    }
       
     function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
@@ -35,6 +42,12 @@
                   sites();
                   i++;
                   console.log("i=", i);
+                  if (i <= litera.length){
+                    perebor(i);
+                  }else{
+                    i=-1; 
+                  }
+                  
               }else{
                   break;
               }
