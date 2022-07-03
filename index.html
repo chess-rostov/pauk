@@ -85,13 +85,14 @@
     
     async function myRun(){
       console.log('myRun');
-
+      var i = -1;
+      var isRun=true;
       if(isRun){
           while (true){
               if(isRun){
                   await sleep(timerValue);
-
-
+                  i++;
+                  console.log("i=", i);
               }else{
                   break;
               }
