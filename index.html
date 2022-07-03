@@ -28,7 +28,8 @@
     let globalUrl='';
     let domen=".ru";
     let literas=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-    let timerValue = 200;  
+    let Gliteras=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+    let timerValue=500;  
       
     function perebor(i) {
         console.log("perebor");
@@ -46,27 +47,29 @@
     async function myRun(){
       console.log('myRun');
       var i=-1;
-      var j=-1;
+      var j=1;
+      var len=0;
       var isRun=true;
       var div='';
       var url='';
       var p='';
       var data='';
-      var part='';
+      var part=literas[0]+literas[1];
       var litera='';
       var protocol='https://';
-      var namesite = 'abc.ru';
-      globalUrl='https://'+namesite;
+      var namesite = '';
+      globalUrl=protocol+namesite;
       if(isRun){
           while (true){
               if(isRun){
                   await sleep(timerValue);
                   /*sites();*/
                   i++;
+                  /*j=i;*/
                   console.log("i=", i);
 
                   litera=literas[i];
-                  part='ab';
+                  /*part='ab';*/
                   /*while(true){
                     j++;
                     console.log("j=", j);
@@ -112,11 +115,17 @@
                             });
                         
                     }else{
-                        /*i=-1;*/
+                        i=-1;
+                        j++;
+                        console.log("j=",j);
+                        
                         div = document.createElement('div');
                         div.innerHTML='<span>Конец поиска</span>';
                         findedsites.appendChild(div);
-                        break;
+                        /*break;*/
+                        part=literas[0]+literas[j];
+                        console.log("part=",part);
+                        /*if(j==3){break};*/
                     }
                   /*}*/
                   
