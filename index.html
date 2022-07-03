@@ -48,6 +48,7 @@
       console.log('myRun');
       var i=-1;
       var j=0;
+      var k=0;
       var len=0;
       var isRun=true;
       var div='';
@@ -123,12 +124,23 @@
                         div.innerHTML='<span>Конец поиска по 3-ей литере</span>';
                         findedsites.appendChild(div);
                         /*break;*/
-                        part=literas[0]+literas[j];
+                        part=literas[k]+literas[j];
                         console.log("part=",part);
                         if(j==literas.length){
+                            j=-1;
+                            k++;
+                            console.log("k=",k);
+                            div = document.createElement('div');
+                            div.innerHTML='<span>Конец поиска по 2-й литере</span>';
+                            findedsites.appendChild(div);
+                            /*break;*/
+                            part=literas[k]+literas[j];
+                            console.log("part=",part);
+                            if(k==literas.length){
                                 div = document.createElement('div');
-                                div.innerHTML='<span>Совсем конец поиска</span>';
-                            break;
+                                div.innerHTML='<span>Конец поиска по 1-й литере</span>';
+                                findedsites.appendChild(div);
+                            }
                         };
                     }
                   /*}*/
