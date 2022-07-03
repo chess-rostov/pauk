@@ -81,7 +81,9 @@
         console.error("Ping failed: " + data);
     });
       
-      
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
     
     async function myRun(){
       console.log('myRun');
