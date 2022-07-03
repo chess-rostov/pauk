@@ -10,13 +10,6 @@
 
 </head>
 <body>
-    <!-- <div>ping https://github.com</div>
-    <div id="ping-github"></div>
-    <div>ping https://mail.ru</div>
-    <div id="ping-mail"></div>
-    <div>ping https://a.ru</div>
-    <div id="ping-a"></div>
-    <br>-->
     <div>Попытка пинга сайта: <span id="namesite"></span></div>
     <div>Ожидание ответа: <span id="timeout"></span></div>
     <div>Результат пинга: <span id="ping-site"></span></div>
@@ -63,7 +56,7 @@
       var data='';
       var part=literas[0]+literas[0];
       var litera='';
-      var protocol='https://';
+      var protocol='http://';
       var namesite = '';
       globalUrl=protocol+namesite;
       if(isRun){
@@ -72,19 +65,9 @@
                   await sleep(timerValue);
                   /*sites();*/
                   i++;
-                  /*j=i;*/
                   console.log("i=", i);
 
                   litera=literas[i];
-                  /*part='ab';*/
-                  /*while(true){
-                    j++;
-                    console.log("j=", j);
-                    if(j==0){
-                        litera='';
-                    }else{
-                        litera=literas[j];
-                    }*/
                     
                     namesite=part+litera+domen;
                     console.log("namesite=",namesite);
