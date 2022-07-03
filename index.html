@@ -18,6 +18,7 @@
     <div id="ping-a"></div>
     <br>-->
     <div>Попытка пинга сайта: <span id="namesite"></span></div>
+    <div>Ожидание ответа: <span id="timeout"></span></div>
     <div>Результат пинга: <span id="ping-site"></span></div>
     <br>
     <div id="findedsites">
@@ -30,6 +31,11 @@
     let literas=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
     let Gliteras=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
     let timerValue=2000;  
+    
+    function set(){
+        console.log("set");
+        document.getElementById("timeout").innerHTML = timerValue+' ms';
+    }
       
     function perebor(i) {
         console.log("perebor");
@@ -154,6 +160,7 @@
 </script>
 </body>
 <script>
+    set();
     myRun();
 </script>
 </html>
